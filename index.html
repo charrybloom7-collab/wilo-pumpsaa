@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wilo Pumps: Types, Benefits, Applications, and Buying Guide</title>
+<meta name="description" content="Explore the main types of Wilo pumps, their applications, benefits, selection criteria, and maintenance tips in this complete buying guide.">
+<style>
+:root{
+  --navy:#0a2540;
+  --blue:#0b6bcb;
+  --cyan:#16b8d4;
+  --aqua:#e8f7fb;
+  --ink:#1c2b3a;
+  --muted:#5b6b7b;
+  --line:#dbe6ee;
+  --bg:#f5f9fc;
+  --white:#fff;
+  --accent:#ff8a3d;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.75;font-size:17px}
+a{color:var(--blue);font-weight:600;text-decoration:none;border-bottom:2px solid rgba(22,184,212,.45);transition:.2s}
+a:hover{color:var(--navy);border-color:var(--accent)}
+.wrap{width:100%;padding:0 clamp(18px,5vw,80px)}
+
+/* HEADER – single line */
+header{position:sticky;top:0;z-index:50;background:var(--navy);box-shadow:0 4px 18px rgba(0,0,0,.18)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:20px;height:70px;flex-wrap:nowrap;white-space:nowrap}
+.logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:20px;letter-spacing:.3px;border:none}
+.logo:hover{color:#fff}
+.logo i{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg,var(--cyan),var(--blue));display:grid;place-items:center;font-style:normal;font-size:19px}
+nav{display:flex;align-items:center;gap:26px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav a{color:#cfe3f3;font-size:15px;font-weight:600;border:none;padding:4px 0}
+nav a:hover{color:#fff}
+.cta{background:linear-gradient(135deg,var(--accent),#ff6a1a);color:#fff!important;padding:9px 18px!important;border-radius:30px;font-size:14px!important}
+@media(max-width:760px){nav a:not(.cta){display:none}.logo{font-size:17px}}
+
+/* HERO */
+.hero{background:linear-gradient(135deg,var(--navy) 0%,#0b3b6f 55%,var(--blue) 100%);color:#fff;padding:90px 0 80px;position:relative;overflow:hidden}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;background:rgba(22,184,212,.14)}
+.hero::before{width:420px;height:420px;right:-120px;top:-140px}
+.hero::after{width:260px;height:260px;left:-80px;bottom:-120px}
+.badge{display:inline-block;background:rgba(22,184,212,.2);border:1px solid rgba(22,184,212,.6);color:#8fe6f5;padding:6px 16px;border-radius:30px;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:22px}
+.hero h1{font-size:clamp(32px,5vw,58px);line-height:1.15;max-width:1000px;margin-bottom:22px}
+.hero p{font-size:clamp(17px,2vw,21px);max-width:900px;color:#d3e6f6;position:relative}
+.hero p a{color:#fff;border-bottom:2px solid var(--cyan)}
+.hero p a:hover{color:var(--cyan)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:16px;margin-top:44px;max-width:980px;position:relative}
+.stat{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:18px 20px}
+.stat b{display:block;font-size:22px;color:var(--cyan)}
+.stat span{font-size:14px;color:#c4dcef}
+
+/* CONTENT */
+main{padding:60px 0 30px}
+section{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,4vw,48px);margin-bottom:30px;box-shadow:0 8px 30px rgba(10,37,64,.05)}
+h2{font-size:clamp(24px,3vw,34px);color:var(--navy);margin-bottom:18px;line-height:1.25;position:relative;padding-left:18px}
+h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:6px;border-radius:6px;background:linear-gradient(var(--cyan),var(--blue))}
+h3{font-size:21px;color:var(--blue);margin:26px 0 10px}
+p{margin-bottom:16px;color:#2b3b4b}
+.lead{background:var(--aqua);border-left:5px solid var(--cyan)}
+
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px;margin-top:20px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:26px;transition:.25s;position:relative}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 30px rgba(11,107,203,.14);border-color:var(--cyan)}
+.card .n{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,var(--cyan),var(--blue));color:#fff;font-weight:800;display:grid;place-items:center;margin-bottom:14px}
+.card h3{margin:0 0 10px;color:var(--navy);font-size:20px}
+.card p{font-size:16px;margin:0}
+
+.benefits{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin:20px 0}
+.benefits li{background:var(--aqua);border-radius:14px;padding:18px 20px;border:1px solid #cdeaf2;font-size:16px}
+.benefits li b{color:var(--navy);display:block;margin-bottom:4px}
+
+.note{background:#fff6ee;border-left:5px solid var(--accent);padding:16px 20px;border-radius:10px;font-size:16px;margin-top:10px}
+
+.tablewrap{overflow-x:auto;border-radius:14px;border:1px solid var(--line);margin:20px 0}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th{background:var(--navy);color:#fff;text-align:left;padding:16px 20px;font-size:15px}
+td{padding:15px 20px;border-top:1px solid var(--line);font-size:16px}
+tr:nth-child(even) td{background:var(--bg)}
+td:first-child{font-weight:700;color:var(--navy)}
+
+.steps{display:grid;gap:16px;margin-top:18px}
+.step{display:flex;gap:18px;background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px}
+.step .num{flex:0 0 46px;height:46px;border-radius:50%;background:var(--blue);color:#fff;font-weight:800;display:grid;place-items:center}
+.step h3{margin:0 0 6px;font-size:19px;color:var(--navy)}
+.step p{margin:0;font-size:16px}
+
+.checks{list-style:none;margin:16px 0}
+.checks li{position:relative;padding:12px 16px 12px 46px;background:var(--bg);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;font-size:16px}
+.checks li::before{content:"✓";position:absolute;left:14px;top:11px;width:22px;height:22px;border-radius:50%;background:var(--cyan);color:#fff;font-size:13px;display:grid;place-items:center;font-weight:800}
+
+.conclusion{background:linear-gradient(135deg,var(--navy),#0b3b6f);border:none}
+.conclusion h2{color:#fff}
+.conclusion p{color:#d3e6f6}
+
+/* FAQ */
+details{background:var(--bg);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:18px 54px 18px 22px;font-weight:700;color:var(--navy);position:relative;font-size:17px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:20px;top:50%;transform:translateY(-50%);width:28px;height:28px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-size:18px;line-height:1}
+details[open] summary::after{content:"–";background:var(--accent)}
+details[open]{border-color:var(--cyan)}
+details p{padding:0 22px 20px;margin:0;font-size:16px}
+
+/* FOOTER */
+footer{background:var(--navy);color:#b9d0e4;margin-top:50px;padding:56px 0 24px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1.3fr;gap:40px}
+footer h4{color:#fff;font-size:17px;margin-bottom:16px}
+footer p{color:#b9d0e4;font-size:15px}
+footer ul{list-style:none}
+footer li{margin-bottom:9px}
+footer a{color:#b9d0e4;border:none;font-weight:500;font-size:15px}
+footer a:hover{color:var(--cyan)}
+.social{display:flex;gap:12px;flex-wrap:wrap}
+.social a{width:44px;height:44px;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:.25s}
+.social a:hover{background:var(--cyan);transform:translateY(-3px)}
+.social svg{width:20px;height:20px;fill:#fff}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;text-align:center;font-size:14px}
+@media(max-width:800px){.fgrid{grid-template-columns:1fr}.hero{padding:60px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hbar">
+    <a class="logo" href="#top"><i>💧</i> Wilo Pumps Guide</a>
+    <nav>
+      <a href="#what">What Are They</a>
+      <a href="#types">Types</a>
+      <a href="#benefits">Benefits</a>
+      <a href="#applications">Applications</a>
+      <a href="#choose">Buying Guide</a>
+      <a href="#faq">FAQs</a>
+      <a class="cta" href="#faq">Get Started</a>
+    </nav>
+  </div>
+</header>
+
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="badge">Complete Buying Guide</span>
+    <h1>Wilo Pumps: Types, Benefits, Applications, and Buying Guide</h1>
+    <p>Reliable water circulation and pressure management are essential for residential buildings, commercial facilities, industrial operations, and modern infrastructure. From supplying water to upper floors in high-rise buildings to supporting heating systems and industrial processes, pumps play an important role in maintaining efficient water movement. <a href="https://atlantis.co.id/">Wilo pumps</a> are widely recognized in the pumping industry for solutions designed for water supply, building services, heating, cooling, and selected industrial applications.</p>
+    <div class="stats">
+      <div class="stat"><b>5 Types</b><span>of pump categories explained</span></div>
+      <div class="stat"><b>4 Steps</b><span>to choose the right pump</span></div>
+      <div class="stat"><b>10 FAQs</b><span>answered in detail</span></div>
+      <div class="stat"><b>All Sectors</b><span>residential to industrial</span></div>
+    </div>
+  </div>
+</div>
+
+<main>
+<div class="wrap">
+
+<section class="lead">
+  <p>Choosing the right pump involves more than comparing prices or motor power. Buyers need to understand flow rate, pressure requirements, energy consumption, installation conditions, and maintenance needs. A properly selected pump can support consistent performance, reduce unnecessary energy use, and improve the reliability of a water system.</p>
+  <p style="margin:0">This guide explores the main types of Wilo pumps, their common applications, important features, selection criteria, and maintenance practices to help homeowners, contractors, facility managers, and industrial buyers make informed decisions.</p>
+</section>
+
+<section id="what">
+  <h2>What Are Wilo Pumps?</h2>
+  <p>Wilo pumps are pumping solutions manufactured by Wilo, a company known for products used in water management, building technology, and industrial applications. Its product portfolio includes pumps and pumping systems designed to move water, circulate fluids, maintain pressure, and support different technical requirements.</p>
+  <p>The appropriate model depends on the intended application. A circulation pump used in a heating system has different operating requirements from a booster pump supplying water to a multistory building. Similarly, industrial installations may require specialized equipment based on fluid characteristics, operating temperatures, and system demands.</p>
+  <p>When considering a Wilo pump, buyers should identify the purpose of the installation first. Understanding the system requirements helps narrow the available options and prevents selecting equipment that is either undersized or unnecessarily powerful.</p>
+</section>
+
+<section id="types">
+  <h2>Different Types of Wilo Pumps</h2>
+  <p>Wilo offers different pump categories for residential, commercial, and industrial environments. Understanding their functions makes it easier to identify a suitable solution.</p>
+  <div class="cards">
+    <div class="card"><div class="n">1</div><h3>Circulation Pumps</h3>
+      <p>Circulation pumps move water through closed-loop systems, including heating and cooling installations. They are commonly used to distribute heated or chilled water between equipment and the areas being served.</p><br>
+      <p>Modern circulation pumps may feature electronically controlled operation that adjusts performance according to system demand. This can help reduce unnecessary energy consumption compared with systems that operate continuously at a fixed output.</p><br>
+      <p>When selecting a circulation pump, consider the required flow rate, pressure loss, fluid temperature, pipe configuration, and control requirements. Compatibility with the existing heating or cooling system is also important.</p></div>
+    <div class="card"><div class="n">2</div><h3>Booster Pumps</h3>
+      <p>Booster pumps help increase or maintain water pressure when the incoming supply cannot meet the needs of a building or installation. They can be useful in multistory properties, commercial facilities, and systems with changing water demand.</p><br>
+      <p>Depending on the model and system configuration, a booster installation may use pressure sensors, controllers, and variable-speed operation to respond to demand.</p><br>
+      <p>Before purchasing a booster pump, assess the incoming water pressure, the required delivery pressure, the number of outlets, and the expected simultaneous water demand. Proper sizing helps maintain consistent performance without excessive cycling or unnecessary energy use.</p></div>
+    <div class="card"><div class="n">3</div><h3>Submersible Pumps</h3>
+      <p>Submersible pumps operate while submerged in the liquid they are designed to pump. Depending on the specific product, they may be used in drainage, wastewater handling, groundwater applications, or other specialized installations.</p><br>
+      <p>The correct model depends on the liquid being handled, installation depth, solids content, flow requirements, and discharge head. Not every submersible pump is suitable for every liquid or drainage condition, so the manufacturer's specifications should always be checked.</p></div>
+    <div class="card"><div class="n">4</div><h3>Centrifugal Pumps</h3>
+      <p>Centrifugal pumps use a rotating impeller to move fluid through a system. They are commonly used in water supply, circulation, and a range of commercial or industrial applications.</p><br>
+      <p>Their suitability depends on the required flow, operating pressure, fluid properties, and system design. Buyers should review pump curves and technical specifications to ensure that the selected model can perform efficiently at the intended operating point.</p></div>
+    <div class="card"><div class="n">5</div><h3>Industrial Pumping Systems</h3>
+      <p>Industrial facilities may require pumping equipment for water distribution, cooling, process support, and other specialized duties. These applications can involve demanding operating schedules and specific requirements for temperature, pressure, materials, and reliability.</p><br>
+      <p>Selecting an industrial pump requires careful evaluation of the complete system rather than the pump alone. Pipework, valves, controls, fluid characteristics, and expected operating hours all affect performance.</p></div>
+  </div>
+</section>
+
+<section id="benefits">
+  <h2>Key Benefits of Wilo Pumps</h2>
+  <p>Selecting an appropriate pump can contribute to reliable water movement and efficient system operation. The actual benefits depend on the model, installation quality, operating conditions, and maintenance practices.</p>
+  <p>One important consideration is energy efficiency. Pumps with suitable hydraulic designs and demand-responsive controls can help limit unnecessary power consumption. This is especially relevant in buildings where circulation or water supply equipment operates for extended periods.</p>
+  <p>Another consideration is system reliability. Choosing equipment that matches the required pressure and flow rate can help reduce operating problems caused by poor sizing. Correct installation and routine maintenance further support dependable operation.</p>
+  <p>Additional potential benefits include:</p>
+  <ul class="benefits">
+    <li><b>Application flexibility</b>Different pump categories serve residential, commercial, and industrial needs.</li>
+    <li><b>Pressure management</b>Suitable booster systems can help maintain water pressure under changing demand.</li>
+    <li><b>Controlled operation</b>Certain models offer electronic controls and variable-speed functionality.</li>
+    <li><b>System integration</b>Compatible pumps can be incorporated into appropriately designed water, heating, or cooling installations.</li>
+    <li><b>Maintenance planning</b>Following the manufacturer's service guidance can help identify developing problems before they cause significant disruption.</li>
+  </ul>
+  <div class="note">Not every feature is available on every model. Always review the product's technical documentation before making a purchase.</div>
+</section>
+
+<section id="applications">
+  <h2>Where Are Wilo Pumps Commonly Used?</h2>
+  <p>Wilo pumps can be used in a variety of settings, depending on the particular product and its approved operating conditions.</p>
+  <p>In residential buildings, suitable pumps may support heating circulation, domestic water pressure, or drainage. In apartments and multistory properties, booster systems can help address pressure requirements when the existing supply is insufficient.</p>
+  <p>Commercial buildings such as offices, hotels, hospitals, and shopping facilities may need pumping systems for water distribution, HVAC circulation, and other building services. In these settings, efficiency and dependable operation are important because equipment problems can affect many occupants. For projects of this kind, it helps to explore <a href="https://atlantis.co.id/">Wilo pump solutions for building services and water supply</a> and compare them against the technical needs of the site.</p>
+  <p>Industrial and infrastructure projects may use specialized pumps for process support, water management, and other engineered applications. These installations often require detailed technical assessments to ensure the equipment is suitable for the fluid, workload, and operating environment.</p>
+  <div class="note">Before choosing a product, confirm that its specifications and intended use match the requirements of the installation.</div>
+</section>
+
+<section id="compare">
+  <h2>Wilo Pumps Comparison Table</h2>
+  <p>The following table compares common pump categories by their typical purpose. It is a general selection guide, not a list of specific Wilo model specifications.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Pump category</th><th>Typical application</th><th>Main selection consideration</th></tr></thead>
+      <tbody>
+        <tr><td>Circulation pump</td><td>Heating and cooling loops</td><td>Flow rate and system resistance</td></tr>
+        <tr><td>Booster pump</td><td>Increasing water pressure</td><td>Required pressure and water demand</td></tr>
+        <tr><td>Submersible pump</td><td>Suitable drainage and submerged applications</td><td>Liquid type, depth, and discharge head</td></tr>
+        <tr><td>Centrifugal pump</td><td>Water transfer and circulation</td><td>Pump curve and operating point</td></tr>
+        <tr><td>Industrial pump</td><td>Specialized commercial and industrial duties</td><td>Fluid properties and operating conditions</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The correct choice depends on the complete system. Consult product documentation or a qualified pump specialist when the application involves demanding operating conditions.</p>
+</section>
+
+<section id="choose">
+  <h2>How to Choose the Right Wilo Pump</h2>
+  <p>Choosing a pump begins with understanding what the system needs to achieve. A model that works well in one building may not be suitable for another because pressure requirements, pipe lengths, elevation changes, and water demand can differ significantly.</p>
+  <div class="steps">
+    <div class="step"><div class="num">1</div><div><h3>Determine the Required Flow Rate</h3>
+      <p>Flow rate describes the volume of fluid the pump must move over a given period. A household installation may have different requirements from a hotel, factory, or irrigation system. Estimate the expected demand using the system's design requirements rather than relying only on the number of people or outlets. For commercial and industrial projects, a qualified designer may need to calculate the required flow under normal and peak conditions.</p></div></div>
+    <div class="step"><div class="num">2</div><div><h3>Calculate Pressure and Head</h3>
+      <p>The pump must provide sufficient pressure or head to overcome elevation changes and resistance in the pipework. Inadequate head can lead to poor delivery, while excessive pressure may increase energy use or require additional pressure regulation. Review the manufacturer's pump curves to identify models that can meet both the flow and head requirements at the intended operating point.</p></div></div>
+    <div class="step"><div class="num">3</div><div><h3>Check Energy Efficiency</h3>
+      <p>Electricity costs can represent a significant portion of the lifetime cost of a pump. Consider motor efficiency, control features, operating hours, and the system's actual demand. A more powerful pump is not automatically a better choice. Proper sizing and suitable controls can be more valuable than selecting a unit with excess capacity.</p></div></div>
+    <div class="step"><div class="num">4</div><div><h3>Consider Installation and Maintenance</h3>
+      <p>Check the available installation space, pipe connections, electrical requirements, ventilation, and access for future maintenance. Confirm whether the installation requires professional commissioning or specific safety precautions. For a clear comparison, request the technical datasheet, warranty terms, spare-parts information, and recommended service schedule before purchasing.</p></div></div>
+  </div>
+</section>
+
+<section id="maintenance">
+  <h2>Maintenance Tips for Better Pump Performance</h2>
+  <p>Routine maintenance helps keep pumping systems operating as intended. The appropriate service interval depends on the model, operating environment, and manufacturer's recommendations.</p>
+  <p>Start by checking the system for visible leaks, unusual noise, vibration, and unexpected changes in pressure or flow. These symptoms can indicate air in the system, blockages, wear, incorrect settings, or other problems requiring investigation.</p>
+  <p>Keep accessible pump areas clean and ensure that the equipment is installed and ventilated according to the manufacturer's instructions. Where applicable, inspect strainers, filters, valves, and associated controls as part of the maintenance schedule.</p>
+  <p>Electrical checks and internal repairs should be performed by qualified personnel. Before any servicing, follow the prescribed isolation and safety procedures, especially for pumps connected to pressurized systems or electrical supplies.</p>
+  <p>Maintain records of inspections, repairs, and operating issues. This information can help technicians identify recurring problems and plan appropriate maintenance.</p>
+</section>
+
+<section id="mistakes">
+  <h2>Common Mistakes to Avoid When Buying Pumps</h2>
+  <ul class="checks">
+    <li>One common mistake is choosing a pump based only on its price or motor power. The pump must match the system's flow, head, fluid, and operating conditions.</li>
+    <li>Another mistake is overlooking installation requirements. Incorrect pipe sizing, unsuitable controls, poor electrical installation, or inadequate commissioning can undermine performance even when the pump itself is suitable.</li>
+    <li>Buyers should also avoid assuming that every pump can handle drinking water, wastewater, hot fluids, or liquids containing solids. Approved applications vary by model, and compatibility must be confirmed using the technical documentation.</li>
+    <li>Finally, compare the total cost of ownership rather than focusing exclusively on the purchase price. Energy consumption, installation, servicing, replacement parts, and expected operating life all affect long-term value.</li>
+  </ul>
+</section>
+
+<section class="conclusion" id="conclusion">
+  <h2>Conclusion</h2>
+  <p>Wilo pumps provide solutions for a range of water management, building services, circulation, and industrial applications. Choosing the right category requires a clear understanding of the system's flow requirements, pressure or head, fluid characteristics, energy use, and installation conditions.</p>
+  <p>Whether a project involves residential water supply, heating circulation, commercial building services, or specialized industrial pumping, careful product selection can support dependable operation and efficient energy use. Buyers should review official specifications, confirm compatibility, and seek professional guidance when calculations or installation requirements are complex.</p>
+  <p style="margin:0">For those researching pump solutions, the next step is to identify the application and compare suitable products against the project's technical requirements. A well-matched pump, installed correctly and maintained according to manufacturer guidance, can provide better long-term performance.</p>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions (FAQs)</h2>
+  <details open><summary>1. What are Wilo pumps used for?</summary><p>Depending on the model, Wilo pumps can be used for water supply, pressure boosting, heating and cooling circulation, drainage, and selected industrial applications.</p></details>
+  <details><summary>2. Are Wilo pumps suitable for residential buildings?</summary><p>Certain models are designed for residential applications, including circulation and water-pressure systems. The correct model depends on the property's water demand, system design, and installation requirements.</p></details>
+  <details><summary>3. What is the difference between a circulation pump and a booster pump?</summary><p>A circulation pump moves fluid around a loop, such as a heating or cooling system. A booster pump increases or maintains pressure in a water supply system.</p></details>
+  <details><summary>4. How do I choose the right Wilo pump?</summary><p>Determine the required flow rate, pressure or head, fluid type, operating temperature, and installation conditions. Then compare these requirements with the manufacturer's technical specifications and pump curves.</p></details>
+  <details><summary>5. Can Wilo pumps help reduce energy consumption?</summary><p>Some models include efficient motor designs or electronic controls that adapt operation to demand. Actual energy savings depend on the selected model, system design, operating conditions, and previous equipment.</p></details>
+  <details><summary>6. How often should a pump be maintained?</summary><p>Maintenance intervals depend on the pump type and operating environment. Follow the manufacturer's instructions and arrange inspections appropriate to the system's workload and criticality.</p></details>
+  <details><summary>7. What should I check before purchasing a Wilo pump?</summary><p>Review the technical datasheet, flow and head performance, electrical requirements, installation dimensions, warranty conditions, spare-parts availability, and suitability for the intended fluid.</p></details>
+  <details><summary>8. Are all Wilo pumps suitable for wastewater?</summary><p>No. Wastewater compatibility depends on the specific model and its design, including its ability to handle solids and the characteristics of the liquid. Check the manufacturer's approved applications before purchasing.</p></details>
+  <details><summary>9. Where can I find information about Wilo pump solutions?</summary><p>You can begin by reviewing the available product range and checking the relevant manufacturer's documentation. Confirm current product availability, specifications, and technical support options with the supplier.</p></details>
+  <details><summary>10. Why is professional pump sizing important?</summary><p>Correct sizing helps ensure that a pump meets the required flow and pressure without unnecessary energy consumption. It can also help prevent poor performance, excessive cycling, and avoidable wear.</p></details>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>💧 Wilo Pumps Guide</h4>
+        <p>A practical guide to Wilo pump types, benefits, applications, and selection criteria for homeowners, contractors, facility managers, and industrial buyers.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#what">What Are Wilo Pumps?</a></li>
+          <li><a href="#types">Types of Pumps</a></li>
+          <li><a href="#choose">How to Choose</a></li>
+          <li><a href="#maintenance">Maintenance Tips</a></li>
+          <li><a href="#faq">FAQs</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <div class="social">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M13.5 22v-8.2h2.8l.4-3.3h-3.2V8.4c0-.9.3-1.6 1.6-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.4H7.3v3.3h2.8V22h3.4z"/></svg></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg></a>
+          <a href="https://x.com/" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18.2 2.5h3.3l-7.2 8.3 8.5 11.2h-6.7l-5.2-6.8-6 6.8H1.6l7.7-8.8L1.2 2.5H8l4.7 6.2 5.5-6.2zm-1.2 17.5h1.8L7.1 4.4H5.2L17 20z"/></svg></a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3V9.5zm6.5 0h3.8v1.6h.1c.5-1 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4V9.5z"/></svg></a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.6 2.6 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.6 2.6 0 0 0 2.4 7.2C2 8.8 2 12 2 12s0 3.2.4 4.8a2.6 2.6 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.6 2.6 0 0 0 1.8-1.8c.4-1.6.4-4.8.4-4.8s0-3.2-.4-4.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2026 Wilo Pumps Guide. All rights reserved.</div>
+  </div>
+</footer>
+
+</body>
+</html>
